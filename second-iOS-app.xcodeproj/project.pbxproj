@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9957880A158FFA9000E84854 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99578809158FFA9000E84854 /* UIKit.framework */; };
+		9957880C158FFA9000E84854 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9957880B158FFA9000E84854 /* Foundation.framework */; };
+		9957880E158FFA9000E84854 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9957880D158FFA9000E84854 /* CoreGraphics.framework */; };
+		99578814158FFA9000E84854 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99578812158FFA9000E84854 /* InfoPlist.strings */; };
+		99578816158FFA9000E84854 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99578815158FFA9000E84854 /* main.m */; };
+		9957881A158FFA9000E84854 /* BirdWatchingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 99578819158FFA9000E84854 /* BirdWatchingAppDelegate.m */; };
+		9957881D158FFA9100E84854 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9957881B158FFA9100E84854 /* MainStoryboard.storyboard */; };
+		99578820158FFA9100E84854 /* BirdWatchingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9957881F158FFA9100E84854 /* BirdWatchingViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		99578805158FFA9000E84854 /* second-iOS-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "second-iOS-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99578809158FFA9000E84854 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9957880B158FFA9000E84854 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9957880D158FFA9000E84854 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		99578811158FFA9000E84854 /* second-iOS-app-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "second-iOS-app-Info.plist"; sourceTree = "<group>"; };
+		99578813158FFA9000E84854 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		99578815158FFA9000E84854 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		99578817158FFA9000E84854 /* second-iOS-app-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "second-iOS-app-Prefix.pch"; sourceTree = "<group>"; };
+		99578818158FFA9000E84854 /* BirdWatchingAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BirdWatchingAppDelegate.h; sourceTree = "<group>"; };
+		99578819158FFA9000E84854 /* BirdWatchingAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirdWatchingAppDelegate.m; sourceTree = "<group>"; };
+		9957881C158FFA9100E84854 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9957881E158FFA9100E84854 /* BirdWatchingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BirdWatchingViewController.h; sourceTree = "<group>"; };
+		9957881F158FFA9100E84854 /* BirdWatchingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirdWatchingViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99578802158FFA9000E84854 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9957880A158FFA9000E84854 /* UIKit.framework in Frameworks */,
+				9957880C158FFA9000E84854 /* Foundation.framework in Frameworks */,
+				9957880E158FFA9000E84854 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		995787FA158FFA9000E84854 = {
+			isa = PBXGroup;
+			children = (
+				9957880F158FFA9000E84854 /* second-iOS-app */,
+				99578808158FFA9000E84854 /* Frameworks */,
+				99578806158FFA9000E84854 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		99578806158FFA9000E84854 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99578805158FFA9000E84854 /* second-iOS-app.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99578808158FFA9000E84854 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99578809158FFA9000E84854 /* UIKit.framework */,
+				9957880B158FFA9000E84854 /* Foundation.framework */,
+				9957880D158FFA9000E84854 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9957880F158FFA9000E84854 /* second-iOS-app */ = {
+			isa = PBXGroup;
+			children = (
+				99578818158FFA9000E84854 /* BirdWatchingAppDelegate.h */,
+				99578819158FFA9000E84854 /* BirdWatchingAppDelegate.m */,
+				9957881B158FFA9100E84854 /* MainStoryboard.storyboard */,
+				9957881E158FFA9100E84854 /* BirdWatchingViewController.h */,
+				9957881F158FFA9100E84854 /* BirdWatchingViewController.m */,
+				99578810158FFA9000E84854 /* Supporting Files */,
+			);
+			path = "second-iOS-app";
+			sourceTree = "<group>";
+		};
+		99578810158FFA9000E84854 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				99578811158FFA9000E84854 /* second-iOS-app-Info.plist */,
+				99578812158FFA9000E84854 /* InfoPlist.strings */,
+				99578815158FFA9000E84854 /* main.m */,
+				99578817158FFA9000E84854 /* second-iOS-app-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		99578804158FFA9000E84854 /* second-iOS-app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99578823158FFA9100E84854 /* Build configuration list for PBXNativeTarget "second-iOS-app" */;
+			buildPhases = (
+				99578801158FFA9000E84854 /* Sources */,
+				99578802158FFA9000E84854 /* Frameworks */,
+				99578803158FFA9000E84854 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "second-iOS-app";
+			productName = "second-iOS-app";
+			productReference = 99578805158FFA9000E84854 /* second-iOS-app.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		995787FC158FFA9000E84854 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BirdWatching;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 995787FF158FFA9000E84854 /* Build configuration list for PBXProject "second-iOS-app" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 995787FA158FFA9000E84854;
+			productRefGroup = 99578806158FFA9000E84854 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99578804158FFA9000E84854 /* second-iOS-app */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99578803158FFA9000E84854 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99578814158FFA9000E84854 /* InfoPlist.strings in Resources */,
+				9957881D158FFA9100E84854 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99578801158FFA9000E84854 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99578816158FFA9000E84854 /* main.m in Sources */,
+				9957881A158FFA9000E84854 /* BirdWatchingAppDelegate.m in Sources */,
+				99578820158FFA9100E84854 /* BirdWatchingViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		99578812158FFA9000E84854 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99578813158FFA9000E84854 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9957881B158FFA9100E84854 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9957881C158FFA9100E84854 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		99578821158FFA9100E84854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		99578822158FFA9100E84854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		99578824158FFA9100E84854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "second-iOS-app/second-iOS-app-Prefix.pch";
+				INFOPLIST_FILE = "second-iOS-app/second-iOS-app-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		99578825158FFA9100E84854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "second-iOS-app/second-iOS-app-Prefix.pch";
+				INFOPLIST_FILE = "second-iOS-app/second-iOS-app-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		995787FF158FFA9000E84854 /* Build configuration list for PBXProject "second-iOS-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99578821158FFA9100E84854 /* Debug */,
+				99578822158FFA9100E84854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99578823158FFA9100E84854 /* Build configuration list for PBXNativeTarget "second-iOS-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99578824158FFA9100E84854 /* Debug */,
+				99578825158FFA9100E84854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 995787FC158FFA9000E84854 /* Project object */;
+}
