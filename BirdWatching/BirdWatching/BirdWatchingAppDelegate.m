@@ -1,8 +1,8 @@
 //
 //  BirdWatchingAppDelegate.m
-//  second-iOS-app
+//  BirdWatching
 //
-//  Created by David Hopp on 6/18/12.
+//  Created by David Hopp on 6/25/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 

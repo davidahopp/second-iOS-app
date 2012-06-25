@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>second-iOS-app.xcscheme</key>
+		<key>BirdWatching.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>99578804158FFA9000E84854</key>
+		<key>99D20C7715991F9D008AFB90</key>
 		<dict>
 			<key>primary</key>
 			<true/>
