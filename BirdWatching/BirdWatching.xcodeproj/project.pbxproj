@@ -19,6 +19,7 @@
 		99D20C9615991F9D008AFB90 /* BirdWatchingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D20C9515991F9D008AFB90 /* BirdWatchingDetailViewController.m */; };
 		99D20C9E15992122008AFB90 /* BirdSighting.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D20C9D15992122008AFB90 /* BirdSighting.m */; };
 		99D20CA1159923F1008AFB90 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D20CA0159923F1008AFB90 /* DataController.m */; };
+		99E9DAE515AB968A00374A09 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E9DAE415AB968A00374A09 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		99D20C9D15992122008AFB90 /* BirdSighting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdSighting.m; sourceTree = "<group>"; };
 		99D20C9F159923F1008AFB90 /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
 		99D20CA0159923F1008AFB90 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
+		99E9DAE415AB968A00374A09 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99E9DAE515AB968A00374A09 /* CoreLocation.framework in Frameworks */,
 				99D20C7D15991F9D008AFB90 /* UIKit.framework in Frameworks */,
 				99D20C7F15991F9D008AFB90 /* Foundation.framework in Frameworks */,
 				99D20C8115991F9D008AFB90 /* CoreGraphics.framework in Frameworks */,
@@ -79,6 +82,7 @@
 		99D20C7B15991F9D008AFB90 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				99E9DAE415AB968A00374A09 /* CoreLocation.framework */,
 				99D20C7C15991F9D008AFB90 /* UIKit.framework */,
 				99D20C7E15991F9D008AFB90 /* Foundation.framework */,
 				99D20C8015991F9D008AFB90 /* CoreGraphics.framework */,

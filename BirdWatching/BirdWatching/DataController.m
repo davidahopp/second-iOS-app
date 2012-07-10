@@ -28,7 +28,7 @@
 - (void)initializeDefaultDataList {
     NSMutableArray *sightingList = [[NSMutableArray alloc] init];
     self.masterBirdSightingList = sightingList;
-    [self addBirdSightingWithName:@"Pigeon" location:@"Everywhere"];
+    [self addBirdSightingWithName:@"Pigeon" location:@"Everywhere" latitude:[NSNumber numberWithDouble:1.2] longitude:[NSNumber numberWithDouble:1.2]];
 }
 
 
@@ -47,11 +47,11 @@
 }
 
 - (void)addBirdSightingWithName:(NSString *)inputBirdName
-                       location:(NSString *)inputLocation {
+location:(NSString *)inputLocation latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude {
     BirdSighting *sighting;
     NSDate *today = [NSDate date];
     sighting = [[BirdSighting alloc] initWithName:inputBirdName
-                                         location:inputLocation date:today];
+                                         location:inputLocation date:today latitude:latitude longitude:longitude];
     [self.masterBirdSightingList addObject:sighting];
 }
 

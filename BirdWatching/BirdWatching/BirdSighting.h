@@ -12,6 +12,8 @@
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *location;
 @property (nonatomic, strong) NSDate *date;
--(id)initWithName:(NSString *)name location:(NSString *)location date:(NSDate *)date;
+@property (nonatomic, strong) NSNumber *latitude;
+@property (nonatomic, strong) NSNumber *longitude;
+-(id)initWithName:(NSString *)name location:(NSString *)location date:(NSDate *)date latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude;
 
 @end

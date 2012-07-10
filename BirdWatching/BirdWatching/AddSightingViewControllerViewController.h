@@ -6,11 +6,17 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import <CoreLocation/CoreLocation.h>
+
 #import <UIKit/UIKit.h>
 
 @protocol AddSightingViewControllerDelegate;
 
-@interface AddSightingViewControllerViewController : UITableViewController <UITextFieldDelegate>
+@interface AddSightingViewControllerViewController : UITableViewController <UITextFieldDelegate,CLLocationManagerDelegate>{
+    
+    CLLocationManager *locationManager;
+}
+@property (nonatomic, retain) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UITextField *birdNameInput;
 @property (weak, nonatomic) IBOutlet UITextField *locationInput;
 @property (weak, nonatomic) id <AddSightingViewControllerDelegate> delegate;
@@ -21,5 +27,5 @@
 
 @protocol AddSightingViewControllerDelegate <NSObject>
 - (void)addSightingViewControllerDidCancel:(AddSightingViewControllerViewController *)controller;
-- (void)addSightingViewControllerDidFinish:(AddSightingViewControllerViewController *)controller name:(NSString *)name location:(NSString *)location;
+- (void)addSightingViewControllerDidFinish:(AddSightingViewControllerViewController *)controller name:(NSString *)name location:(NSString *)location latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude;
 @end
