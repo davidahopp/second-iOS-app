@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D2001" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
@@ -87,6 +87,31 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="gNR-Fv-Xjc">
+                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GPS Coords" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="2WZ-N8-ooD">
+                                                    <rect key="frame" x="20" y="11" width="96" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="wDy-Dr-XkU">
+                                                    <rect key="frame" x="159" y="11" width="141" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -109,6 +134,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="birdNameInput" destination="nCd-ci-wCH" id="Yrl-n7-RFi"/>
+                        <outlet property="gpsCoordsDisplay" destination="wDy-Dr-XkU" id="MEK-Fg-A5c"/>
+                        <outlet property="gps_coords" destination="wDy-Dr-XkU" id="9Qm-dU-pwG"/>
                         <outlet property="locationInput" destination="5z1-7W-Hqk" id="Dcj-Ss-ACo"/>
                     </connections>
                 </tableViewController>
@@ -259,6 +286,31 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="wFe-KS-ZXz">
+                                        <rect key="frame" x="0.0" y="154" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GPS Coords" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Zip-u2-gSF">
+                                                    <rect key="frame" x="20" y="11" width="130" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="mod-q4-6P7">
+                                                    <rect key="frame" x="170" y="11" width="130" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -271,6 +323,8 @@
                     <connections>
                         <outlet property="birdNameLabel" destination="EBs-yH-tu5" id="pXa-3k-A2x"/>
                         <outlet property="dateLabel" destination="fhd-Sg-Vm2" id="ibg-lF-wNw"/>
+                        <outlet property="gpsCoordsLabel" destination="mod-q4-6P7" id="BiA-hL-dEl"/>
+                        <outlet property="gps_coords" destination="mod-q4-6P7" id="ycR-BA-gQ9"/>
                         <outlet property="locationLabel" destination="yVo-T4-END" id="F8m-Gf-T9b"/>
                     </connections>
                 </tableViewController>
@@ -303,6 +357,7 @@
                 <relationship kind="action" name="cancel:"/>
                 <relationship kind="action" name="done:"/>
                 <relationship kind="outlet" name="birdNameInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="gpsCoordsDisplay" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="locationInput" candidateClass="UITextField"/>
             </relationships>
         </class>
@@ -311,6 +366,7 @@
             <relationships>
                 <relationship kind="outlet" name="birdNameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gpsCoordsLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="locationLabel" candidateClass="UILabel"/>
             </relationships>
         </class>

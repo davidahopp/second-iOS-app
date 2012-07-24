@@ -13,14 +13,32 @@
 @end
 
 @implementation AddSightingViewControllerViewController
+
 @synthesize birdNameInput = _birdNameInput;
 @synthesize locationInput = _locationInput;
 @synthesize delegate = _delegate;
+@synthesize gpsCoordsDisplay = _gpsCoordsDisplay;
 @synthesize locationManager = _locationManager;
+
+NSNumber *latitude;
+NSNumber *longitude;
 
 -(void)viewDidLoad{
     
     [[self locationManager] startUpdatingLocation];
+    
+    // If it's not possible to get a location, then return.
+	CLLocation *location = [locationManager location];
+	if (!location) {
+		return;
+	}
+    
+    // Configure the new event with information from the location.
+	CLLocationCoordinate2D coordinate = [location coordinate];
+    latitude = [NSNumber numberWithDouble:coordinate.latitude];
+    longitude = [NSNumber numberWithDouble:coordinate.longitude];
+    
+    self.gpsCoordsDisplay.text = [NSString stringWithFormat:@"φ:%.4F, λ:%.4F", latitude, longitude];
 }
 
 - (void)viewDidUnload
@@ -28,6 +46,7 @@
     [self setBirdNameInput:nil];
     [self setLocationInput:nil];
     locationManager = nil;
+    [self setGpsCoordsDisplay:nil];
     [super viewDidUnload];
     
 }
@@ -44,11 +63,6 @@
 	if (!location) {
 		return;
 	}
-    
-    // Configure the new event with information from the location.
-	CLLocationCoordinate2D coordinate = [location coordinate];
-    NSNumber *latitude = [NSNumber numberWithDouble:coordinate.latitude];
-    NSNumber *longitude = [NSNumber numberWithDouble:coordinate.longitude];
 
     [[self delegate] addSightingViewControllerDidFinish:self name:self.birdNameInput.text location:self.locationInput.text latitude:latitude longitude:longitude];
 }

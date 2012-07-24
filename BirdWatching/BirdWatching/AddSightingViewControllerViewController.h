@@ -16,13 +16,13 @@
     
     CLLocationManager *locationManager;
 }
+@property (weak, nonatomic) IBOutlet UILabel *gpsCoordsDisplay;
 @property (nonatomic, retain) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UITextField *birdNameInput;
 @property (weak, nonatomic) IBOutlet UITextField *locationInput;
 @property (weak, nonatomic) id <AddSightingViewControllerDelegate> delegate;
 - (IBAction)cancel:(id)sender;
 - (IBAction)done:(id)sender;
-
 @end
 
 @protocol AddSightingViewControllerDelegate <NSObject>

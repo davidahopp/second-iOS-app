@@ -14,6 +14,7 @@
 @end
 
 @implementation BirdWatchingDetailViewController
+@synthesize gpsCoordsLabel = _gpsCoordsLabel;
 
 @synthesize sighting = _sighting, birdNameLabel = _birdNameLabel, locationLabel = _locationLabel, dateLabel = _dateLabel;
 
@@ -39,10 +40,12 @@
         [formatter setDateStyle:NSDateFormatterMediumStyle];
     }
     if (theSighting) {
+        self.gpsCoordsLabel.text = [NSString stringWithFormat:@"lat:%.4F, long:%.4F", theSighting.latitude, theSighting.longitude];
         self.birdNameLabel.text = theSighting.name;
         self.locationLabel.text = theSighting.location;
         self.dateLabel.text = [formatter stringFromDate:(NSDate
                                                          *)theSighting.date];
+        
     }
 }
 
@@ -56,6 +59,7 @@
 - (void)viewDidUnload
 {
     self.sighting = nil;
+    [self setGpsCoordsLabel:nil];
     [super viewDidUnload];
     
 }

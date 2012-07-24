@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *birdNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *gpsCoordsLabel;
 
 @end
