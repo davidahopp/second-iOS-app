@@ -135,7 +135,6 @@
                     <connections>
                         <outlet property="birdNameInput" destination="nCd-ci-wCH" id="Yrl-n7-RFi"/>
                         <outlet property="gpsCoordsDisplay" destination="wDy-Dr-XkU" id="MEK-Fg-A5c"/>
-                        <outlet property="gps_coords" destination="wDy-Dr-XkU" id="9Qm-dU-pwG"/>
                         <outlet property="locationInput" destination="5z1-7W-Hqk" id="Dcj-Ss-ACo"/>
                     </connections>
                 </tableViewController>
@@ -324,7 +323,6 @@
                         <outlet property="birdNameLabel" destination="EBs-yH-tu5" id="pXa-3k-A2x"/>
                         <outlet property="dateLabel" destination="fhd-Sg-Vm2" id="ibg-lF-wNw"/>
                         <outlet property="gpsCoordsLabel" destination="mod-q4-6P7" id="BiA-hL-dEl"/>
-                        <outlet property="gps_coords" destination="mod-q4-6P7" id="ycR-BA-gQ9"/>
                         <outlet property="locationLabel" destination="yVo-T4-END" id="F8m-Gf-T9b"/>
                     </connections>
                 </tableViewController>
