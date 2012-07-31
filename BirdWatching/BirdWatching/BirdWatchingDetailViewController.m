@@ -40,7 +40,7 @@
         [formatter setDateStyle:NSDateFormatterMediumStyle];
     }
     if (theSighting) {
-        self.gpsCoordsLabel.text = [NSString stringWithFormat:@"lat:%.4F, long:%.4F", theSighting.latitude, theSighting.longitude];
+        self.gpsCoordsLabel.text = [NSString stringWithFormat:@"lat:%.4f, long:%.4f", [theSighting.latitude floatValue], [theSighting.longitude floatValue]];
         self.birdNameLabel.text = theSighting.name;
         self.locationLabel.text = theSighting.location;
         self.dateLabel.text = [formatter stringFromDate:(NSDate

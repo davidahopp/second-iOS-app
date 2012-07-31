@@ -61,6 +61,7 @@
 }
 
 - (void)addSightingViewControllerDidFinish:(AddSightingViewControllerViewController *)controller name:(NSString *)name location:(NSString *)location latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude {
+
     if ([name length] || [location length]) {
         [self.dataController addBirdSightingWithName:name location:location latitude:latitude longitude:longitude];
         [[self tableView] reloadData];

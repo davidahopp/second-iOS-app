@@ -13,6 +13,7 @@
 
 -(id)initWithName:(NSString *)name location:(NSString *)location date:(NSDate *)date latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude{
     self = [super init];
+
     if (self) {
         _name = name;
         _location = location;

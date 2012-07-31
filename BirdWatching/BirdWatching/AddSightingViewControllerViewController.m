@@ -38,7 +38,7 @@ NSNumber *longitude;
     latitude = [NSNumber numberWithDouble:coordinate.latitude];
     longitude = [NSNumber numberWithDouble:coordinate.longitude];
     
-    self.gpsCoordsDisplay.text = [NSString stringWithFormat:@"φ:%.4F, λ:%.4F", latitude, longitude];
+    self.gpsCoordsDisplay.text = [NSString stringWithFormat:@"lat:%.4f, long:%.4f", [latitude floatValue], [longitude floatValue]];
 }
 
 - (void)viewDidUnload
@@ -58,13 +58,7 @@ NSNumber *longitude;
 - (IBAction)done:(id)sender {
 
     
-    // If it's not possible to get a location, then return.
-	CLLocation *location = [locationManager location];
-	if (!location) {
-		return;
-	}
-
-    [[self delegate] addSightingViewControllerDidFinish:self name:self.birdNameInput.text location:self.locationInput.text latitude:latitude longitude:longitude];
+  [[self delegate] addSightingViewControllerDidFinish:self name:self.birdNameInput.text location:self.locationInput.text latitude:latitude longitude:longitude];
 }
 
 
