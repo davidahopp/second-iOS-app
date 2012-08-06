@@ -28,7 +28,7 @@
 - (void)initializeDefaultDataList {
     NSMutableArray *sightingList = [[NSMutableArray alloc] init];
     self.masterBirdSightingList = sightingList;
-    [self addBirdSightingWithName:@"Pigeon" location:@"Everywhere" latitude:[NSNumber numberWithDouble:1.2] longitude:[NSNumber numberWithDouble:1.2]];
+    [self addBirdSightingWithName:@"Pigeon" location:@"Everywhere" latitude:[NSNumber numberWithDouble:37.78] longitude:[NSNumber numberWithDouble:-122.40]];
 }
 
 

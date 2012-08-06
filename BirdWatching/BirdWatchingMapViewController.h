@@ -9,6 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface BirdWatchingMapViewController : UIViewController
+@class BirdSighting;
+
+IBOutlet MKMapView *mapView;
+
+@interface BirdWatchingMapViewController : UIViewController <MKMapViewDelegate>{
+    MKMapView *mapView;
+}
+
+@property (strong, nonatomic) BirdSighting *sighting;
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
 @end

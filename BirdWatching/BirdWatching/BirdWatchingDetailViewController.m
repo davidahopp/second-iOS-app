@@ -8,6 +8,7 @@
 
 #import "BirdSighting.h"
 #import "BirdWatchingDetailViewController.h"
+#import "BirdWatchingMapViewController.h"
 
 @interface BirdWatchingDetailViewController ()
 - (void)configureView;
@@ -68,5 +69,14 @@
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"ShowBirdWatchingMap"]) {
+        BirdWatchingMapViewController *mapViewController = [segue destinationViewController];
+        mapViewController.sighting = self.sighting;
+    } 
+    
+}
+
 
 @end
