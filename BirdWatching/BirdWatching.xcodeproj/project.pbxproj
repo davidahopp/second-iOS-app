@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		225DE02B15D07E2400215E91 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225DE02A15D07E2400215E91 /* MapKit.framework */; };
+		225DE02F15D0821700215E91 /* BirdWatchingMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225DE02E15D0821700215E91 /* BirdWatchingMapViewController.m */; };
 		9930691215A26269008626C7 /* AddSightingViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9930691115A26269008626C7 /* AddSightingViewControllerViewController.m */; };
 		99D20C7D15991F9D008AFB90 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99D20C7C15991F9D008AFB90 /* UIKit.framework */; };
 		99D20C7F15991F9D008AFB90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99D20C7E15991F9D008AFB90 /* Foundation.framework */; };
@@ -23,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		225DE02A15D07E2400215E91 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		225DE02D15D0821700215E91 /* BirdWatchingMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdWatchingMapViewController.h; sourceTree = SOURCE_ROOT; };
+		225DE02E15D0821700215E91 /* BirdWatchingMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdWatchingMapViewController.m; sourceTree = SOURCE_ROOT; };
 		9930691015A26269008626C7 /* AddSightingViewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSightingViewControllerViewController.h; sourceTree = "<group>"; };
 		9930691115A26269008626C7 /* AddSightingViewControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSightingViewControllerViewController.m; sourceTree = "<group>"; };
 		99D20C7815991F9D008AFB90 /* BirdWatching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirdWatching.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225DE02B15D07E2400215E91 /* MapKit.framework in Frameworks */,
 				99E9DAE515AB968A00374A09 /* CoreLocation.framework in Frameworks */,
 				99D20C7D15991F9D008AFB90 /* UIKit.framework in Frameworks */,
 				99D20C7F15991F9D008AFB90 /* Foundation.framework in Frameworks */,
@@ -82,6 +88,7 @@
 		99D20C7B15991F9D008AFB90 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				225DE02A15D07E2400215E91 /* MapKit.framework */,
 				99E9DAE415AB968A00374A09 /* CoreLocation.framework */,
 				99D20C7C15991F9D008AFB90 /* UIKit.framework */,
 				99D20C7E15991F9D008AFB90 /* Foundation.framework */,
@@ -93,6 +100,8 @@
 		99D20C8215991F9D008AFB90 /* BirdWatching */ = {
 			isa = PBXGroup;
 			children = (
+				225DE02D15D0821700215E91 /* BirdWatchingMapViewController.h */,
+				225DE02E15D0821700215E91 /* BirdWatchingMapViewController.m */,
 				99D20C8B15991F9D008AFB90 /* BirdWatchingAppDelegate.h */,
 				99D20C8C15991F9D008AFB90 /* BirdWatchingAppDelegate.m */,
 				99D20C8E15991F9D008AFB90 /* MainStoryboard.storyboard */,
@@ -192,6 +201,7 @@
 				99D20C9E15992122008AFB90 /* BirdSighting.m in Sources */,
 				99D20CA1159923F1008AFB90 /* DataController.m in Sources */,
 				9930691215A26269008626C7 /* AddSightingViewControllerViewController.m in Sources */,
+				225DE02F15D0821700215E91 /* BirdWatchingMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
