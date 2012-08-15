@@ -385,36 +385,6 @@
             <point key="canvasLocation" x="515" y="680"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="AddSightingViewControllerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddSightingViewControllerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="done:"/>
-                <relationship kind="outlet" name="birdNameInput" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="gpsCoordsDisplay" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="locationInput" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="BirdWatchingDetailViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BirdWatchingDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="birdNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="gpsCoordsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="locationLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="BirdWatchingMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BirdWatchingMapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="BirdWatchingMasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BirdWatchingMasterViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
