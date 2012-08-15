@@ -28,14 +28,11 @@
 
 - (void)configureView
 {
-    NSLog(@"%f", [self.sighting.latitude floatValue]);
-    NSLog(@"%f", [self.sighting.longitude floatValue]);
-    
+
     MKCoordinateRegion newRegion;
     newRegion.center.latitude = [self.sighting.latitude floatValue];
     newRegion.center.longitude = [self.sighting.longitude floatValue];
-    newRegion.span.latitudeDelta = 0.112872;
-    newRegion.span.longitudeDelta = 0.109863;
+
     
     [self.mapView setRegion:newRegion animated:YES];
     
@@ -47,7 +44,7 @@
     NSMutableArray *myArray = [[NSMutableArray alloc] init];
 	self.sightingAnnotations = myArray;
     
-    BirdWatchingAnnotation *annotation = [[BirdWatchingAnnotation alloc] init];
+    BirdWatchingAnnotation *annotation = [[BirdWatchingAnnotation alloc] initWithProperties:self.sighting];
 
     [self.sightingAnnotations addObject:annotation];
     

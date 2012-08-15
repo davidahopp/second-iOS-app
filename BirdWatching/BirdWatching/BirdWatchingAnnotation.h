@@ -7,10 +7,15 @@
 //
 
 #import <MapKit/MapKit.h>
+#import "BirdSighting.h"
 
 @interface BirdWatchingAnnotation : NSObject <MKAnnotation>
 {
     
 }
+
+@property (nonatomic, strong) BirdSighting *sighting;
+
+- (id) initWithProperties: (BirdSighting *)sighting;
 
 @end
