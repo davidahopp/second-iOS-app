@@ -9,14 +9,11 @@
 #import "BirdSighting.h"
 #import "BirdWatchingMapViewController.h"
 
-@interface BirdWatchingMapViewController ()
--(void)configureView;
-@end
 
 @implementation BirdWatchingMapViewController
 
 @synthesize sighting = _sighting;
-@synthesize mapView = _mapView;
+@synthesize mapView;
 
 - (void)setSighting:(BirdSighting *) newSighting
 {
@@ -33,28 +30,25 @@
     NSLog(@"%f", [self.sighting.latitude floatValue]);
     NSLog(@"%f", [self.sighting.longitude floatValue]);
     
-    MKCoordinateRegion region;
-    MKCoordinateSpan span;
-    span.latitudeDelta = 0.005;
-    span.longitudeDelta = 0.005;
-    CLLocationCoordinate2D location;
-    location.latitude = [self.sighting.latitude floatValue];
-    location.longitude = [self.sighting.longitude floatValue];
-    region.span = span;
-    region.center = location;
+    MKCoordinateRegion newRegion;
+    newRegion.center.latitude = [self.sighting.latitude floatValue];
+    newRegion.center.longitude = [self.sighting.longitude floatValue];
+    newRegion.span.latitudeDelta = 0.112872;
+    newRegion.span.longitudeDelta = 0.109863;
     
-    [self.mapView setRegion:region animated:YES];
+    [self.mapView setRegion:newRegion animated:YES];
+    
+    
+
     
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    self.mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
-    [self.mapView setMapType:MKMapTypeHybrid];
     
-    [self.mapView setDelegate:self];
+    self.mapView.mapType = MKMapTypeStandard;
+    
+    [self configureView];
     
 }
 

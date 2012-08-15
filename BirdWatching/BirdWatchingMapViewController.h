@@ -11,13 +11,12 @@
 
 @class BirdSighting;
 
-IBOutlet MKMapView *mapView;
-
-@interface BirdWatchingMapViewController : UIViewController <MKMapViewDelegate>{
+@interface BirdWatchingMapViewController : UIViewController <MKMapViewDelegate>
+{
     MKMapView *mapView;
 }
 
 @property (strong, nonatomic) BirdSighting *sighting;
-@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property (nonatomic, retain) IBOutlet MKMapView *mapView;
 
 @end

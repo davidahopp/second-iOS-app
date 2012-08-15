@@ -353,14 +353,14 @@
                                 <rect key="frame" x="0.0" y="44" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
-                                    <outlet property="delegate" destination="31d-Ka-wjc" id="wqo-6X-Qoz"/>
+                                    <outlet property="delegate" destination="31d-Ka-wjc" id="e9F-fk-fTC"/>
                                 </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="V93-3f-8qf" id="3fc-cj-P9Q"/>
+                        <outlet property="mapView" destination="V93-3f-8qf" id="dPh-fI-qPl"/>
                     </connections>
                 </viewController>
             </objects>
