@@ -61,8 +61,15 @@
 {
     
     MKCoordinateRegion newRegion;
+    //NSLog(@"%f", [self.sighting.latitude floatValue]);
+    //NSLog(@"%f", [self.sighting.longitude floatValue]);
     newRegion.center.latitude = [self.sighting.latitude floatValue];
     newRegion.center.longitude = [self.sighting.longitude floatValue];
+    
+    MKCoordinateSpan span;
+    span.latitudeDelta = .005;
+    span.longitudeDelta = .005;
+    newRegion.span = span;
     
     
     [self.mapView setRegion:newRegion animated:YES];
