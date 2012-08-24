@@ -7,14 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "BirdWatchingAnnotation.h"
+
+@class BirdSighting;
 
 @protocol SightingMapViewControllerDelagate;
 
-@interface SightingMapViewController : UIViewController
+@interface SightingMapViewController : UIViewController <MKMapViewDelegate>
+{
 
-@property (weak, nonatomic) id <SightingMapViewControllerDelagate>delegate;
+    MKMapView *mapView;
+    NSMutableArray *sightingAnnotations;
+}
 
-- (IBAction)cancel:(id)sender;
+    @property (weak, nonatomic) id <SightingMapViewControllerDelagate>delegate;
+    @property (strong, nonatomic) BirdSighting *sighting;
+    @property (nonatomic, retain) IBOutlet MKMapView *mapView;
+    @property(nonatomic,retain) NSMutableArray *sightingAnnotations;
+
+
+    - (IBAction)cancel:(id)sender;
 
 @end
 

@@ -75,13 +75,13 @@
     if ([[segue identifier] isEqualToString:@"ShowBirdSightingMap"]) {
         SightingMapViewController *sightingViewController = (SightingMapViewController *)[[[segue destinationViewController] viewControllers] objectAtIndex:0];
         sightingViewController.delegate = self;
+        sightingViewController.sighting = [self sighting];
 
     }
 
 }
 
 - (void)sightingMapViewDidCancel:(SightingMapViewController *)controller{
-    NSLog(@"111");
     [self dismissViewControllerAnimated:YES completion: NULL];
 }
 
