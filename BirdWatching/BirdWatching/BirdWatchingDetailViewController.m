@@ -8,9 +8,10 @@
 
 #import "BirdSighting.h"
 #import "BirdWatchingDetailViewController.h"
-#import "BirdWatchingMapViewController.h"
+#import "SightingMapViewController.h"
 
 @interface BirdWatchingDetailViewController ()
+<SightingMapViewControllerDelagate>
 - (void)configureView;
 @end
 
@@ -71,11 +72,17 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"ShowBirdWatchingMap"]) {
-        BirdWatchingMapViewController *mapViewController = [segue destinationViewController];
-        mapViewController.sighting = self.sighting;
-    } 
-    
+    if ([[segue identifier] isEqualToString:@"ShowBirdSightingMap"]) {
+        SightingMapViewController *sightingViewController = (SightingMapViewController *)[[[segue destinationViewController] viewControllers] objectAtIndex:0];
+        sightingViewController.delegate = self;
+
+    }
+
+}
+
+- (void)sightingMapViewDidCancel:(SightingMapViewController *)controller{
+    NSLog(@"111");
+    [self dismissViewControllerAnimated:YES completion: NULL];
 }
 
 

@@ -9,6 +9,9 @@
 #import "BirdSighting.h"
 #import "BirdWatchingMapViewController.h"
 
+@interface BirdWatchingMapViewController ()
+
+@end
 
 @implementation BirdWatchingMapViewController
 
@@ -99,6 +102,7 @@
 }
 
 - (IBAction)cancel:(id)sender {
+    NSLog(@"here");
   [[self delegate] birdWatchingMapViewControllerDidCancel:self];  
 }
 @end
