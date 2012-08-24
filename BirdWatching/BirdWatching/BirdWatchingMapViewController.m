@@ -15,6 +15,7 @@
 @synthesize sighting = _sighting;
 @synthesize mapView;
 @synthesize sightingAnnotations;
+@synthesize delegate = _delegate;
 
 - (void)setSighting:(BirdSighting *) newSighting
 {
@@ -97,4 +98,7 @@
     return annotationView;
 }
 
+- (IBAction)cancel:(id)sender {
+  [[self delegate] birdWatchingMapViewControllerDidCancel:self];  
+}
 @end

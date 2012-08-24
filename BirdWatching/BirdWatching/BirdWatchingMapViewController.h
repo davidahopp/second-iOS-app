@@ -12,6 +12,8 @@
 
 @class BirdSighting;
 
+@protocol BirdWatchingMapViewControllerDelegate;
+
 @interface BirdWatchingMapViewController : UIViewController <MKMapViewDelegate>
 {
     MKMapView *mapView;
@@ -21,7 +23,14 @@
 @property (strong, nonatomic) BirdSighting *sighting;
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 @property(nonatomic,retain) NSMutableArray *sightingAnnotations;
+@property (weak, nonatomic) id <BirdWatchingMapViewControllerDelegate> delegate;
 
+- (IBAction)cancel:(id)sender;
 
+@end
+
+@protocol BirdWatchingMapViewControllerDelegate <NSObject>
+
+- (void) birdWatchingMapViewControllerDidCancel:(BirdWatchingMapViewController *)controller;
 
 @end
