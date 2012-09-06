@@ -9,8 +9,10 @@
 #import "DataController.h"
 #import "BirdSighting.h"
 
+#define BIRD_ARRAY_TAG @"birdArray"
+
 @interface DataController ()
-    - (void)initializeDefaultDataList;
+- (void)initializeDataList;
 @end
 
 @implementation DataController
@@ -19,16 +21,23 @@
 
 - (id)init {
     if (self = [super init]) {
-        [self initializeDefaultDataList];
+        [self initializeDataList];
         return self;
     }
     return nil;
 }
 
-- (void)initializeDefaultDataList {
-    NSMutableArray *sightingList = [[NSMutableArray alloc] init];
-    self.masterBirdSightingList = sightingList;
-    [self addBirdSightingWithName:@"Pigeon" location:@"Everywhere" latitude:[NSNumber numberWithDouble:37.78] longitude:[NSNumber numberWithDouble:-122.40]];
+- (void)initializeDataList {
+    //NSMutableArray *sightingList = [[NSMutableArray alloc] init];
+    //self.masterBirdSightingList = sightingList;
+//    [self addBirdSightingWithName:@"Pigeon" location:@"Everywhere" latitude:[NSNumber numberWithDouble:37.78] longitude:[NSNumber numberWithDouble:-122.40]];
+    NSData *myDecodedObject = [[NSUserDefaults standardUserDefaults] objectForKey: [NSString stringWithFormat:BIRD_ARRAY_TAG]];
+    NSArray *decodedArray = [NSKeyedUnarchiver unarchiveObjectWithData: myDecodedObject];
+    self.masterBirdSightingList = [decodedArray mutableCopy];
+    if (self.masterBirdSightingList == nil)
+    {
+        self.masterBirdSightingList = [[NSMutableArray alloc] init];
+    }
 }
 
 
@@ -47,13 +56,22 @@
 }
 
 - (void)addBirdSightingWithName:(NSString *)inputBirdName
-location:(NSString *)inputLocation latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude {
+                       location:(NSString *)inputLocation
+                       latitude:(NSNumber *)latitude
+                      longitude:(NSNumber *)longitude {
+    
     BirdSighting *sighting;
 
     NSDate *today = [NSDate date];
     sighting = [[BirdSighting alloc] initWithName:inputBirdName
                                          location:inputLocation date:today latitude:latitude longitude:longitude];
     [self.masterBirdSightingList addObject:sighting];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *myEncodedObject = [NSKeyedArchiver archivedDataWithRootObject:self.masterBirdSightingList];
+    [defaults setObject:myEncodedObject forKey:BIRD_ARRAY_TAG];
+
+    [defaults synchronize];
 }
 
 @end
