@@ -14,5 +14,5 @@
 - (NSUInteger)countOfList;
 - (BirdSighting *)objectInListAtIndex:(NSUInteger)theIndex;
 - (void)addBirdSightingWithName:(NSString *)inputBirdName location:(NSString *)inputLocation latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude;
-
+- (void)removeObjectAtIndex:(int)index;
 @end

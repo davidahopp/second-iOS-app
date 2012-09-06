@@ -13,6 +13,7 @@
 
 @interface DataController ()
 - (void)initializeDataList;
+- (void)syncronizeData;
 @end
 
 @implementation DataController
@@ -47,6 +48,12 @@
     }
 }
 
+- (void)removeObjectAtIndex:(int)index
+{
+    [self.masterBirdSightingList removeObjectAtIndex:index];
+    [self syncronizeData];
+}
+
 - (NSUInteger)countOfList {
    return [self.masterBirdSightingList count]; 
 }
@@ -67,10 +74,15 @@
                                          location:inputLocation date:today latitude:latitude longitude:longitude];
     [self.masterBirdSightingList addObject:sighting];
     
+    [self syncronizeData];
+}
+
+- (void)syncronizeData
+{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSData *myEncodedObject = [NSKeyedArchiver archivedDataWithRootObject:self.masterBirdSightingList];
     [defaults setObject:myEncodedObject forKey:BIRD_ARRAY_TAG];
-
+    
     [defaults synchronize];
 }
 
