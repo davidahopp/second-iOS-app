@@ -31,7 +31,7 @@
 - (void)initializeDataList {
     //NSMutableArray *sightingList = [[NSMutableArray alloc] init];
     //self.masterBirdSightingList = sightingList;
-//    [self addBirdSightingWithName:@"Pigeon" location:@"Everywhere" latitude:[NSNumber numberWithDouble:37.78] longitude:[NSNumber numberWithDouble:-122.40]];
+
     NSData *myDecodedObject = [[NSUserDefaults standardUserDefaults] objectForKey: [NSString stringWithFormat:BIRD_ARRAY_TAG]];
     NSArray *decodedArray = [NSKeyedUnarchiver unarchiveObjectWithData: myDecodedObject];
     self.masterBirdSightingList = [decodedArray mutableCopy];
@@ -39,6 +39,10 @@
     {
         self.masterBirdSightingList = [[NSMutableArray alloc] init];
     }
+    //[self addBirdSightingWithName:@"Pigeon" location:@"Everywhere" latitude:[NSNumber numberWithDouble:37.78] longitude:[NSNumber numberWithDouble:-122.40]];
+    //[self addBirdSightingWithName:@"Pigeon1" location:@"Everywhere" latitude:[NSNumber numberWithDouble:36.78] longitude:[NSNumber numberWithDouble:-122.40]];
+    //[self addBirdSightingWithName:@"Pigeon2" location:@"Everywhere" latitude:[NSNumber numberWithDouble:37.78] longitude:[NSNumber numberWithDouble:-120.40]];
+    //[self addBirdSightingWithName:@"Pigeon3" location:@"Everywhere" latitude:[NSNumber numberWithDouble:37.78] longitude:[NSNumber numberWithDouble:-123.40]];
 }
 
 
