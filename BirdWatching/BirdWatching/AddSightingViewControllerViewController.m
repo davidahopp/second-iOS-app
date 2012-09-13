@@ -26,15 +26,15 @@ NSNumber *longitude;
 -(void)viewDidLoad{
     
     [[self locationManager] startUpdatingLocation];
-    
-    // If it's not possible to get a location, then return.
-	CLLocation *location = [locationManager location];
-	if (!location) {
-		return;
-	}
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    [self.locationManager stopUpdatingLocation];
+    NSLog(@"%@", newLocation);
     
     // Configure the new event with information from the location.
-	CLLocationCoordinate2D coordinate = [location coordinate];
+	CLLocationCoordinate2D coordinate = [newLocation coordinate];
     latitude = [NSNumber numberWithDouble:coordinate.latitude];
     longitude = [NSNumber numberWithDouble:coordinate.longitude];
     
