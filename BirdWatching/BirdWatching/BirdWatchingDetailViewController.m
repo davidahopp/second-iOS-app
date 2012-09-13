@@ -75,8 +75,7 @@
     if ([[segue identifier] isEqualToString:@"ShowBirdSightingMap"]) {
         SightingMapViewController *sightingViewController = (SightingMapViewController *)[[[segue destinationViewController] viewControllers] objectAtIndex:0];
         sightingViewController.delegate = self;
-        sightingViewController.sighting = [self sighting];
-
+        [sightingViewController addBirdSighting:self.sighting];
     }
 
 }

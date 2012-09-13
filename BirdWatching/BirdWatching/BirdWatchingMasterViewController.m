@@ -15,10 +15,11 @@
 #import "BirdWatchingDetailViewController.h"
 
 #import "AddSightingViewControllerViewController.h"
+#import "SightingMapViewController.h"
 
 
 @interface BirdWatchingMasterViewController ()
-<AddSightingViewControllerDelegate>
+<AddSightingViewControllerDelegate, SightingMapViewControllerDelagate>
 @end
 
 /*
@@ -118,11 +119,25 @@
     } else if ([[segue identifier] isEqualToString:@"ShowAddSightingView"]) {
         AddSightingViewControllerViewController *addController = (AddSightingViewControllerViewController *)[[[segue destinationViewController] viewControllers] objectAtIndex:0];
         addController.delegate = self;
+    } else if ([[segue identifier] isEqualToString:@"ShowAllBirdSightingsMap"]) {
+        SightingMapViewController *sightingViewController = (SightingMapViewController *)[[[segue destinationViewController] viewControllers] objectAtIndex:0];
+        
+        sightingViewController.delegate = self;
+        
+        NSMutableArray *birdSightings = [self.dataController masterBirdSightingList];
+        
+        for (int i = 0; i < [birdSightings count]; i++) {
+            [sightingViewController addBirdSighting:[birdSightings objectAtIndex:i]];
+        }
     }
+    
+    
     
 }
 
-
+- (void)sightingMapViewDidCancel:(SightingMapViewController *)controller{
+    [self dismissViewControllerAnimated:YES completion: NULL];
+}
 
 
 @end

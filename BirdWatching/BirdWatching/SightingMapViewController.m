@@ -18,15 +18,20 @@
 @synthesize mapView;
 @synthesize sightingAnnotations;
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if(self != nil)
+    {
+        NSMutableArray *myArray = [[NSMutableArray alloc] init];
+        self.sightingAnnotations = myArray;
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad
 {
-    NSMutableArray *myArray = [[NSMutableArray alloc] init];
-	self.sightingAnnotations = myArray;
-    
-    BirdWatchingAnnotation *annotation = [[BirdWatchingAnnotation alloc] initWithProperties:self.sighting];
-    
-    [self.sightingAnnotations addObject:annotation];
-    
     self.mapView.mapType = MKMapTypeStandard;
     
     [self configureView];
@@ -58,13 +63,12 @@
 }
 
 - (void)configureView
-{
-    
+{    
     MKCoordinateRegion newRegion;
     //NSLog(@"%f", [self.sighting.latitude floatValue]);
     //NSLog(@"%f", [self.sighting.longitude floatValue]);
-    newRegion.center.latitude = [self.sighting.latitude floatValue];
-    newRegion.center.longitude = [self.sighting.longitude floatValue];
+    newRegion.center.latitude = [[[[self.sightingAnnotations objectAtIndex:0] sighting] latitude] floatValue];
+    newRegion.center.longitude = [[[[self.sightingAnnotations objectAtIndex:0] sighting] longitude] floatValue];
     
     MKCoordinateSpan span;
     span.latitudeDelta = .005;
@@ -107,6 +111,12 @@
     annotationView.canShowCallout = YES;
     
     return annotationView;
+}
+
+- (void)addBirdSighting:(BirdSighting *)birdSighting
+{
+    BirdWatchingAnnotation *birdAnnotaiton = [[BirdWatchingAnnotation alloc] initWithProperties:birdSighting];
+    [self.sightingAnnotations addObject:birdAnnotaiton];
 }
 
 

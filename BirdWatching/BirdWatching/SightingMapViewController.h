@@ -28,7 +28,7 @@
 
 
     - (IBAction)cancel:(id)sender;
-
+- (void)addBirdSighting:(BirdSighting *)birdSighting;
 @end
 
 @protocol SightingMapViewControllerDelagate <NSObject>

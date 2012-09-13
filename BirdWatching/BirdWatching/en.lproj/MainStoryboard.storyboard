@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
@@ -187,6 +187,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Bird Sightings" id="36">
+                        <barButtonItem key="leftBarButtonItem" title="Map All" id="vjp-zI-oeI">
+                            <connections>
+                                <segue destination="y7t-Hg-SLX" kind="modal" identifier="ShowAllBirdSightingsMap" id="zoa-W6-5PP"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PLB-YO-Vtv">
                             <connections>
                                 <segue destination="qlC-O1-9Re" kind="modal" identifier="ShowAddSightingView" id="xZs-Zi-DSK"/>
@@ -395,7 +400,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="1397" y="64"/>
+            <point key="canvasLocation" x="1389" y="-776"/>
         </scene>
     </scenes>
     <classes>
@@ -434,4 +439,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="zoa-W6-5PP"/>
+    </inferredMetricsTieBreakers>
 </document>
