@@ -166,7 +166,7 @@
             </objects>
             <point key="canvasLocation" x="942" y="680"/>
         </scene>
-        <!--Image View Controller-->
+        <!--Image View Controller - Bird Image-->
         <scene sceneID="QGJ-ho-OCC">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1zf-Ur-JAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -179,13 +179,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="276"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bird Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="J92-8P-ufk">
-                                <rect key="frame" x="20" y="284" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UE0-E6-fjK">
                                 <rect key="frame" x="20" y="359" width="170" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -219,7 +212,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Zmt-xM-U53"/>
+                    <navigationItem key="navigationItem" title="Bird Image" id="Zmt-xM-U53"/>
                     <connections>
                         <outlet property="birdImageView" destination="BLL-4b-3e7" id="mne-xl-OnI"/>
                     </connections>

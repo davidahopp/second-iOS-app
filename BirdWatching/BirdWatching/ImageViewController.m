@@ -24,13 +24,9 @@
         // Custom initialization
     }
     
-    if(self.birdSighting)
-    {
-        self.birdImageView.image = self.birdSighting.image;
-    }
-    
     return self;
 }
+
 - (IBAction)loadExistingImageButtonClicked:(id)sender {
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     
@@ -76,7 +72,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	if(self.birdSighting)
+    {
+        self.birdImageView.image = self.birdSighting.image;
+        self.title = self.birdSighting.name;
+    }
 }
 
 - (void)viewDidUnload
