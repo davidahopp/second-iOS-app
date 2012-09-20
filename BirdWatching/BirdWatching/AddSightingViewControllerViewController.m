@@ -76,6 +76,14 @@ NSNumber *longitude;
     return YES;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"birdImagePicker"]) {
+        ImageViewController *ivc = [segue destinationViewController];
+        ivc.delegate = self;
+    }
+}
+
 /**
  Return a location manager -- create one if necessary.
  */
