@@ -53,7 +53,9 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     self.birdImageView.image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    
+    //TODO: make sure this works.
+    if(picker.sourceType == UIImagePickerControllerSourceTypeCamera)
+        UIImageWriteToSavedPhotosAlbum(self.birdImageView.image, nil, nil, nil);
     [picker dismissModalViewControllerAnimated:YES];
     
 }
