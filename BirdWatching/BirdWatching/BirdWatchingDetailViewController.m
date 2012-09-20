@@ -9,13 +9,16 @@
 #import "BirdSighting.h"
 #import "BirdWatchingDetailViewController.h"
 #import "SightingMapViewController.h"
+#import "ImageViewController.h"
 
 @interface BirdWatchingDetailViewController ()
-<SightingMapViewControllerDelagate>
+<SightingMapViewControllerDelagate, ImageViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *birdImageView;
 - (void)configureView;
 @end
 
 @implementation BirdWatchingDetailViewController
+@synthesize birdImageView = _birdImageView;
 @synthesize gpsCoordsLabel = _gpsCoordsLabel;
 
 @synthesize sighting = _sighting, birdNameLabel = _birdNameLabel, locationLabel = _locationLabel, dateLabel = _dateLabel;
@@ -47,6 +50,7 @@
         self.locationLabel.text = theSighting.location;
         self.dateLabel.text = [formatter stringFromDate:(NSDate
                                                          *)theSighting.date];
+        self.birdImageView.image = theSighting.image;
         
     }
 }
@@ -62,6 +66,7 @@
 {
     self.sighting = nil;
     [self setGpsCoordsLabel:nil];
+    [self setBirdImageView:nil];
     [super viewDidUnload];
     
 }
@@ -82,6 +87,11 @@
 
 - (void)sightingMapViewDidCancel:(SightingMapViewController *)controller{
     [self dismissViewControllerAnimated:YES completion: NULL];
+}
+
+- (void)imageViewControllerDelegateDidFinish:(ImageViewController *)controller image:(UIImage *)image
+{
+    self.birdImageView.image = image;
 }
 
 
