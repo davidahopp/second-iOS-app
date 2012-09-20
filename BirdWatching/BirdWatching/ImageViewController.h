@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImageViewController : UIViewController <UINavigationControllerDelegate>
+@protocol ImageViewControllerDelegate;
 
+@interface ImageViewController : UIViewController <UINavigationControllerDelegate>
+@property (weak, nonatomic) id <ImageViewControllerDelegate> delegate;
+@end
+
+@protocol ImageViewControllerDelegate <NSObject>
+- (void)imageViewControllerDelegateDidFinish:(ImageViewController *)controller image:(UIImage *)image;
 @end

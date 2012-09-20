@@ -7,8 +7,9 @@
 //
 
 #import "AddSightingViewControllerViewController.h"
+#import "ImageViewController.h"
 
-@interface AddSightingViewControllerViewController ()
+@interface AddSightingViewControllerViewController () <ImageViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *birdSightingView;
 
 @end
@@ -59,8 +60,6 @@ NSNumber *longitude;
 }
 
 - (IBAction)done:(id)sender {
-
-    
     [[self delegate] addSightingViewControllerDidFinish:self name:self.birdNameInput.text location:self.locationInput.text latitude:latitude longitude:longitude image:self.birdSightingView.image];
 }
 
@@ -93,6 +92,10 @@ NSNumber *longitude;
 	return locationManager;
 }
 
+- (void)imageViewControllerDelegateDidFinish:(ImageViewController *)controller image:(UIImage *)image
+{
+    self.birdSightingView.image = image;
+}
 
 
 
