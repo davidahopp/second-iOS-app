@@ -14,7 +14,8 @@
 @end
 
 @implementation ImageViewController 
-@synthesize birdImageView;
+@synthesize birdImageView = _birdImageView;
+@synthesize birdSighting = _birdSighting;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,6 +23,12 @@
     if (self) {
         // Custom initialization
     }
+    
+    if(self.birdSighting)
+    {
+        self.birdImageView.image = self.birdSighting.image;
+    }
+    
     return self;
 }
 - (IBAction)loadExistingImageButtonClicked:(id)sender {

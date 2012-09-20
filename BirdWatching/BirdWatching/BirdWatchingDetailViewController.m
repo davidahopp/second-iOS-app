@@ -82,6 +82,11 @@
         sightingViewController.delegate = self;
         [sightingViewController addBirdSighting:self.sighting];
     }
+    else if([segue.identifier isEqualToString:@"birdImagePicker"]) {
+        ImageViewController *ivc = [segue destinationViewController];
+        ivc.delegate = self;
+        ivc.birdSighting = self.sighting;
+    }
 
 }
 

@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BirdSighting.h"
 
 @protocol ImageViewControllerDelegate;
 
 @interface ImageViewController : UIViewController <UINavigationControllerDelegate>
 @property (weak, nonatomic) id <ImageViewControllerDelegate> delegate;
+@property (nonatomic, strong) BirdSighting *birdSighting;
 @end
 
 @protocol ImageViewControllerDelegate <NSObject>
