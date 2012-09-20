@@ -27,5 +27,5 @@
 
 @protocol AddSightingViewControllerDelegate <NSObject>
 - (void)addSightingViewControllerDidCancel:(AddSightingViewControllerViewController *)controller;
-- (void)addSightingViewControllerDidFinish:(AddSightingViewControllerViewController *)controller name:(NSString *)name location:(NSString *)location latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude;
+- (void)addSightingViewControllerDidFinish:(AddSightingViewControllerViewController *)controller name:(NSString *)name location:(NSString *)location latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude image:(UIImage *)image;
 @end

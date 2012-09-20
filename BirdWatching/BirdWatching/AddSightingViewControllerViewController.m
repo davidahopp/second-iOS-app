@@ -9,10 +9,12 @@
 #import "AddSightingViewControllerViewController.h"
 
 @interface AddSightingViewControllerViewController ()
+@property (strong, nonatomic) IBOutlet UIImageView *birdSightingView;
 
 @end
 
 @implementation AddSightingViewControllerViewController
+@synthesize birdSightingView = _birdSightingView;
 
 @synthesize birdNameInput = _birdNameInput;
 @synthesize locationInput = _locationInput;
@@ -47,6 +49,7 @@ NSNumber *longitude;
     [self setLocationInput:nil];
     locationManager = nil;
     [self setGpsCoordsDisplay:nil];
+    [self setBirdSightingView:nil];
     [super viewDidUnload];
     
 }
@@ -58,7 +61,7 @@ NSNumber *longitude;
 - (IBAction)done:(id)sender {
 
     
-  [[self delegate] addSightingViewControllerDidFinish:self name:self.birdNameInput.text location:self.locationInput.text latitude:latitude longitude:longitude];
+    [[self delegate] addSightingViewControllerDidFinish:self name:self.birdNameInput.text location:self.locationInput.text latitude:latitude longitude:longitude image:self.birdSightingView.image];
 }
 
 

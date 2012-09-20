@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
@@ -133,7 +133,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="mHH-Ot-9UQ" kind="push" id="f4N-Wq-0Sj"/>
+                                            <segue destination="mHH-Ot-9UQ" kind="push" identifier="birdImagePicker" id="f4N-Wq-0Sj"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -158,6 +158,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="birdNameInput" destination="nCd-ci-wCH" id="Yrl-n7-RFi"/>
+                        <outlet property="birdSightingView" destination="3rV-tj-E8q" id="0rq-63-Lav"/>
                         <outlet property="gpsCoordsDisplay" destination="wDy-Dr-XkU" id="MEK-Fg-A5c"/>
                         <outlet property="locationInput" destination="5z1-7W-Hqk" id="Dcj-Ss-ACo"/>
                     </connections>
@@ -218,6 +219,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="birdImageView" destination="BLL-4b-3e7" id="mne-xl-OnI"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1486" y="458"/>
@@ -492,6 +496,7 @@
                 <relationship kind="action" name="cancel:"/>
                 <relationship kind="action" name="done:"/>
                 <relationship kind="outlet" name="birdNameInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="birdSightingView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="gpsCoordsDisplay" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="locationInput" candidateClass="UITextField"/>
             </relationships>
@@ -513,6 +518,7 @@
             <relationships>
                 <relationship kind="action" name="loadCameraButtonClicked:"/>
                 <relationship kind="action" name="loadExistingImageButtonClicked:"/>
+                <relationship kind="outlet" name="birdImageView" candidateClass="UIImageView"/>
             </relationships>
         </class>
         <class className="SightingMapViewController" superclassName="UIViewController">

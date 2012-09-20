@@ -9,10 +9,12 @@
 #import "ImageViewController.h"
 
 @interface ImageViewController () <UIImagePickerControllerDelegate>
+@property (strong, nonatomic) IBOutlet UIImageView *birdImageView;
 
 @end
 
 @implementation ImageViewController 
+@synthesize birdImageView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,6 +50,14 @@
     [self presentModalViewController:imagePicker animated:YES];
 }
 
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    self.birdImageView.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    [picker dismissModalViewControllerAnimated:YES];
+    
+}
+
 
 
 
@@ -59,6 +69,7 @@
 
 - (void)viewDidUnload
 {
+    [self setBirdImageView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

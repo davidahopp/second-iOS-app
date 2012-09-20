@@ -9,9 +9,9 @@
 #import "BirdSighting.h"
 
 @implementation BirdSighting
-@synthesize name = _name, location = _location, date = _date, latitude = _latitude, longitude = _longitude;
+@synthesize name = _name, location = _location, date = _date, latitude = _latitude, longitude = _longitude, image = _image;
 
--(id)initWithName:(NSString *)name location:(NSString *)location date:(NSDate *)date latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude{
+-(id)initWithName:(NSString *)name location:(NSString *)location date:(NSDate *)date latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude image:(UIImage *)image{
     self = [super init];
 
     if (self) {
@@ -20,6 +20,7 @@
         _date = date;
         _latitude = latitude;
         _longitude = longitude;
+        _image = image;
         return self;
     }
     return nil;
@@ -32,6 +33,7 @@
     [encoder encodeObject:self.date forKey:@"date"];
     [encoder encodeObject:self.latitude forKey:@"latitude"];
     [encoder encodeObject:self.longitude forKey:@"longitude"];
+    [encoder encodeObject:self.image forKey:@"image"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
@@ -42,6 +44,7 @@
         self.date = [decoder decodeObjectForKey:@"date"];
         self.latitude = [decoder decodeObjectForKey:@"latitude"];
         self.longitude = [decoder decodeObjectForKey:@"longitude"];
+        self.image = [decoder decodeObjectForKey:@"image"];
     }
     return self;
 }

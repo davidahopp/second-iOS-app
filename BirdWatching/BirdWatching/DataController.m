@@ -39,10 +39,10 @@
     {
         self.masterBirdSightingList = [[NSMutableArray alloc] init];
     }
-    //[self addBirdSightingWithName:@"Pigeon" location:@"Everywhere" latitude:[NSNumber numberWithDouble:37.78] longitude:[NSNumber numberWithDouble:-122.40]];
-    //[self addBirdSightingWithName:@"Pigeon1" location:@"Everywhere" latitude:[NSNumber numberWithDouble:36.78] longitude:[NSNumber numberWithDouble:-122.40]];
-    //[self addBirdSightingWithName:@"Pigeon2" location:@"Everywhere" latitude:[NSNumber numberWithDouble:37.78] longitude:[NSNumber numberWithDouble:-120.40]];
-    //[self addBirdSightingWithName:@"Pigeon3" location:@"Everywhere" latitude:[NSNumber numberWithDouble:37.78] longitude:[NSNumber numberWithDouble:-123.40]];
+    //[self addBirdSightingWithName:@"Pigeon" location:@"Everywhere" latitude:[NSNumber numberWithDouble:37.78] longitude:[NSNumber numberWithDouble:-122.40 image:nil]];
+    //[self addBirdSightingWithName:@"Pigeon1" location:@"Everywhere" latitude:[NSNumber numberWithDouble:36.78] longitude:[NSNumber numberWithDouble:-122.40 image:nil]];
+    //[self addBirdSightingWithName:@"Pigeon2" location:@"Everywhere" latitude:[NSNumber numberWithDouble:37.78] longitude:[NSNumber numberWithDouble:-120.40 image:nil]];
+    //[self addBirdSightingWithName:@"Pigeon3" location:@"Everywhere" latitude:[NSNumber numberWithDouble:37.78] longitude:[NSNumber numberWithDouble:-123.40 image:nil]];
 }
 
 
@@ -69,13 +69,12 @@
 - (void)addBirdSightingWithName:(NSString *)inputBirdName
                        location:(NSString *)inputLocation
                        latitude:(NSNumber *)latitude
-                      longitude:(NSNumber *)longitude {
+longitude:(NSNumber *)longitude image:(UIImage *) image{
     
     BirdSighting *sighting;
 
     NSDate *today = [NSDate date];
-    sighting = [[BirdSighting alloc] initWithName:inputBirdName
-                                         location:inputLocation date:today latitude:latitude longitude:longitude];
+    sighting = [[BirdSighting alloc] initWithName:inputBirdName location:inputLocation date:today latitude:latitude longitude:longitude image:image];
     [self.masterBirdSightingList addObject:sighting];
     
     [self syncronizeData];

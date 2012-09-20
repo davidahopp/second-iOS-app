@@ -61,10 +61,10 @@
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
-- (void)addSightingViewControllerDidFinish:(AddSightingViewControllerViewController *)controller name:(NSString *)name location:(NSString *)location latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude {
+- (void)addSightingViewControllerDidFinish:(AddSightingViewControllerViewController *)controller name:(NSString *)name location:(NSString *)location latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude image:(UIImage *)image {
 
     if ([name length] || [location length]) {
-        [self.dataController addBirdSightingWithName:name location:location latitude:latitude longitude:longitude];
+        [self.dataController addBirdSightingWithName:name location:location latitude:latitude longitude:longitude image:image];
         [[self tableView] reloadData];
     }
     [self dismissModalViewControllerAnimated:YES];
