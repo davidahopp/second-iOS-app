@@ -11,9 +11,10 @@
 #import "SightingMapViewController.h"
 #import "ImageViewController.h"
 #import "Requester.h"
+#import "EditSightingViewController.h"
 
 @interface BirdWatchingDetailViewController ()
-<SightingMapViewControllerDelagate, ImageViewControllerDelegate, RequesterDelegate>
+<SightingMapViewControllerDelagate, ImageViewControllerDelegate, RequesterDelegate, EditSightingViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *birdImageView;
 - (void)configureView;
 @end
@@ -88,6 +89,11 @@
         ivc.delegate = self;
         ivc.birdSighting = self.sighting;
     }
+    else if([segue.identifier isEqualToString:@"editSighting"]){
+        EditSightingViewController *esvc = segue.destinationViewController;
+        esvc.delegate = self;
+        esvc.birdSighting = self.sighting;
+    }
 
 }
 - (IBAction)sendBirdSightingToServer:(id)sender {
@@ -115,6 +121,10 @@
 - (void)imageViewControllerDelegateDidFinish:(ImageViewController *)controller image:(UIImage *)image
 {
     self.birdImageView.image = image;
+}
+
+- (void)editSightingDidUpdate:(EditSightingViewController *)controller withSighting:(BirdSighting *)sighting{
+    
 }
 
 

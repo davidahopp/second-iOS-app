@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		225DE02B15D07E2400215E91 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225DE02A15D07E2400215E91 /* MapKit.framework */; };
+		227A10041614F00B0032F965 /* EditSightingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227A10031614F00B0032F965 /* EditSightingViewController.m */; };
 		693BB616160BA21700F39DC2 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 693BB615160BA21700F39DC2 /* ImageViewController.m */; };
 		69D9C6481614E2E6007A9F72 /* Requester.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D9C6471614E2E6007A9F72 /* Requester.m */; };
 		99165CE715DC1C42008EFA67 /* BirdWatchingAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 99165CE615DC1C42008EFA67 /* BirdWatchingAnnotation.m */; };
@@ -29,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		225DE02A15D07E2400215E91 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		227A10021614F00B0032F965 /* EditSightingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditSightingViewController.h; sourceTree = "<group>"; };
+		227A10031614F00B0032F965 /* EditSightingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditSightingViewController.m; sourceTree = "<group>"; };
 		693BB614160BA21700F39DC2 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		693BB615160BA21700F39DC2 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		69D9C6461614E2E6007A9F72 /* Requester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Requester.h; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				693BB614160BA21700F39DC2 /* ImageViewController.h */,
 				693BB615160BA21700F39DC2 /* ImageViewController.m */,
 				99D20C8E15991F9D008AFB90 /* MainStoryboard.storyboard */,
+				227A10021614F00B0032F965 /* EditSightingViewController.h */,
+				227A10031614F00B0032F965 /* EditSightingViewController.m */,
 				99A999B915E81C26003372C7 /* SightingMapViewController.h */,
 				99A999BA15E81C27003372C7 /* SightingMapViewController.m */,
 				99D20C8315991F9D008AFB90 /* Supporting Files */,
@@ -220,6 +225,7 @@
 				99A999BB15E81C27003372C7 /* SightingMapViewController.m in Sources */,
 				693BB616160BA21700F39DC2 /* ImageViewController.m in Sources */,
 				69D9C6481614E2E6007A9F72 /* Requester.m in Sources */,
+				227A10041614F00B0032F965 /* EditSightingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D2001" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -281,6 +282,115 @@
             </objects>
             <point key="canvasLocation" x="459" y="64"/>
         </scene>
+        <!--Edit Sighting View Controller-->
+        <scene sceneID="NWw-TU-4kl">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nCQ-TC-L6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="1OF-sp-Ua4" customClass="EditSightingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="apZ-lA-QTS">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bird Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="OkP-uL-K6A">
+                                <rect key="frame" x="-4" y="59" width="130" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Location" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="FRj-zp-394">
+                                <rect key="frame" x="-4" y="98" width="130" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="G6D-g9-ha3">
+                                <rect key="frame" x="0.0" y="142" width="130" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GPS Latitude" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="hb5-UE-DkR">
+                                <rect key="frame" x="0.0" y="181" width="130" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GPS Longitute" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="yab-Zq-g5w">
+                                <rect key="frame" x="0.0" y="219" width="130" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="hgv-x0-HvD">
+                                <rect key="frame" x="134" y="54" width="166" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="gfI-rX-eW0">
+                                <rect key="frame" x="134" y="93" width="166" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="890-NH-qIg">
+                                <rect key="frame" x="134" y="137" width="166" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="uKh-e8-a2b">
+                                <rect key="frame" x="134" y="176" width="166" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="rQx-ef-zkJ">
+                                <rect key="frame" x="134" y="215" width="166" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" id="tu5-ly-yBd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Edit" id="TQB-9K-sQS">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="bTW-sf-I8Y">
+                                            <connections>
+                                                <action selector="cancel:" destination="1OF-sp-Ua4" id="LM8-Fo-UIE"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="owa-38-VQQ">
+                                            <connections>
+                                                <action selector="save:" destination="1OF-sp-Ua4" id="ffd-DI-ixj"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JWS-EQ-b7k">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="LwK-iA-Ajj"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dateTextField" destination="890-NH-qIg" id="EEq-gk-Ff3"/>
+                        <outlet property="latituteTextField" destination="uKh-e8-a2b" id="wCk-Pj-rLi"/>
+                        <outlet property="locationTextField" destination="gfI-rX-eW0" id="0md-6d-HKz"/>
+                        <outlet property="longitudeTextField" destination="rQx-ef-zkJ" id="bxQ-xK-4me"/>
+                        <outlet property="nameTextField" destination="hgv-x0-HvD" id="dTg-jY-v8b"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="711" y="-501"/>
+        </scene>
         <!--Bird Watching Detail View Controller-->
         <scene sceneID="Dlv-r6-0pf">
             <objects>
@@ -454,7 +564,13 @@
                             <outlet property="delegate" destination="2fW-re-s5s" id="FOw-Ru-HTF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ddC-yh-hJa"/>
+                    <navigationItem key="navigationItem" id="ddC-yh-hJa">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="0aj-3P-aHJ">
+                            <connections>
+                                <segue destination="1OF-sp-Ua4" kind="modal" identifier="editSighting" id="uEA-qw-NNy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="birdImageView" destination="5UR-tK-Jdk" id="Szz-qe-OSd"/>
                         <outlet property="birdNameLabel" destination="EBs-yH-tu5" id="pXa-3k-A2x"/>
@@ -531,56 +647,16 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="et1-f5-RNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1389" y="-776"/>
+            <point key="canvasLocation" x="1407" y="-408"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="AddSightingViewControllerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddSightingViewControllerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="done:"/>
-                <relationship kind="outlet" name="birdNameInput" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="birdSightingView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="gpsCoordsDisplay" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="locationInput" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="BirdWatchingDetailViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BirdWatchingDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="sendBirdSightingToServer:"/>
-                <relationship kind="outlet" name="birdImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="birdNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="gpsCoordsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="locationLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="BirdWatchingMasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BirdWatchingMasterViewController.h"/>
-        </class>
-        <class className="ImageViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="birdImageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="SightingMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SightingMapViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="f4N-Wq-0Sj"/>
-        <segue reference="RKH-8D-FHM"/>
+        <segue reference="zoa-W6-5PP"/>
+        <segue reference="pBu-JZ-kFG"/>
     </inferredMetricsTieBreakers>
 </document>
