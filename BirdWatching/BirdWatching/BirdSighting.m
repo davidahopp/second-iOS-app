@@ -49,5 +49,11 @@
     return self;
 }
 
+- (NSString *)formatForWeb
+{
+    return [NSString stringWithFormat:@"name=%@&location=%@&date=%@&latitude=%@&longitude=%@",
+            self.name, self.location, self.date, self.latitude, self.longitude];
+}
+
 
 @end

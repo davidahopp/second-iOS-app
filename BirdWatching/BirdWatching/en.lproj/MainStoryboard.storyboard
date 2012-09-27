@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="11">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
                 <navigationController id="3" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
                         <autoresizingMask key="autoresizingMask"/>
@@ -17,13 +15,13 @@
                         <segue destination="12" kind="relationship" relationship="rootViewController" id="19"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
         <!--Add Sighting View Controller View Controller-->
         <scene sceneID="kT1-Uh-Lhp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mfo-8B-d7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="fMQ-lB-mjr" customClass="AddSightingViewControllerViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Auy-RW-vEE">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -163,13 +161,13 @@
                         <outlet property="locationInput" destination="5z1-7W-Hqk" id="Dcj-Ss-ACo"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mfo-8B-d7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="942" y="680"/>
         </scene>
         <!--Image View Controller - Bird Image-->
         <scene sceneID="QGJ-ho-OCC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1zf-Ur-JAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="mHH-Ot-9UQ" customClass="ImageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aw4-W7-T62">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -217,13 +215,13 @@
                         <outlet property="birdImageView" destination="BLL-4b-3e7" id="mne-xl-OnI"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1zf-Ur-JAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1486" y="458"/>
         </scene>
         <!--Bird Watching Master View Controller - Master-->
         <scene sceneID="18">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="" title="Master" id="12" customClass="BirdWatchingMasterViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -279,13 +277,13 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="459" y="64"/>
         </scene>
         <!--Bird Watching Detail View Controller-->
         <scene sceneID="Dlv-r6-0pf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZFb-dO-x9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="2fW-re-s5s" customClass="BirdWatchingDetailViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Q7P-6c-I2m">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -422,6 +420,32 @@
                                             <segue destination="mHH-Ot-9UQ" kind="push" identifier="birdImagePicker" id="pBu-JZ-kFG"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="jBc-9m-6QB">
+                                        <rect key="frame" x="0.0" y="313" width="320" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4aq-dA-FH7">
+                                                    <rect key="frame" x="165" y="5" width="135" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="Send To Server">
+                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="sendBirdSightingToServer:" destination="2fW-re-s5s" eventType="touchUpInside" id="PR0-rM-6Ae"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -439,13 +463,13 @@
                         <outlet property="locationLabel" destination="yVo-T4-END" id="F8m-Gf-T9b"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZFb-dO-x9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="914" y="64"/>
         </scene>
         <!--Sighting Map View Controller - Bird Sighting-->
         <scene sceneID="4ui-wS-gce">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BRM-QO-Bbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="zMf-tb-quA" customClass="SightingMapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bUh-uY-621">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -469,13 +493,13 @@
                         <outlet property="mapView" destination="QXK-tU-Wvz" id="cSw-SP-GZK"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BRM-QO-Bbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1879" y="64"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eAZ-14-gSO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qEY-QK-cVY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="qlC-O1-9Re" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8No-gt-BQM">
@@ -487,13 +511,13 @@
                         <segue destination="fMQ-lB-mjr" kind="relationship" relationship="rootViewController" id="hRQ-Km-Wc0"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qEY-QK-cVY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="515" y="680"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dGR-A8-Hnu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="et1-f5-RNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="y7t-Hg-SLX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="olK-0w-vQO">
@@ -505,6 +529,7 @@
                         <segue destination="zMf-tb-quA" kind="relationship" relationship="rootViewController" id="Jcy-Mh-xFT"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="et1-f5-RNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1389" y="-776"/>
         </scene>
@@ -524,6 +549,7 @@
         <class className="BirdWatchingDetailViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BirdWatchingDetailViewController.h"/>
             <relationships>
+                <relationship kind="action" name="sendBirdSightingToServer:"/>
                 <relationship kind="outlet" name="birdImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="birdNameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>

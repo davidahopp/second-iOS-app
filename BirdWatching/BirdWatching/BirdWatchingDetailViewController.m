@@ -10,9 +10,10 @@
 #import "BirdWatchingDetailViewController.h"
 #import "SightingMapViewController.h"
 #import "ImageViewController.h"
+#import "Requester.h"
 
 @interface BirdWatchingDetailViewController ()
-<SightingMapViewControllerDelagate, ImageViewControllerDelegate>
+<SightingMapViewControllerDelagate, ImageViewControllerDelegate, RequesterDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *birdImageView;
 - (void)configureView;
 @end
@@ -88,6 +89,23 @@
         ivc.birdSighting = self.sighting;
     }
 
+}
+- (IBAction)sendBirdSightingToServer:(id)sender {
+    Requester *requester = [[Requester alloc] initWithRestString:@"process_any.php" andDelegate:self andIdentifier:@"sendBirdSighting"];
+    
+    [requester performHTTPMethod:@"POST" withData:[self.sighting formatForWeb]];
+    
+}
+
+- (void)identifierDidFinishDownloading:(NSString *)identifier withJSON:(NSDictionary *)json
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Posted!"
+														message:@"YAY!!"
+													   delegate:nil
+											  cancelButtonTitle:@"Okay"
+											  otherButtonTitles:nil];
+    [alertView show];
+    
 }
 
 - (void)sightingMapViewDidCancel:(SightingMapViewController *)controller{
