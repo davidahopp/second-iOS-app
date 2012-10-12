@@ -32,7 +32,7 @@ static NSInteger connectionCount;
 	return self;
 }
 
-#define SERVER_URL @"http://abbysdoor.com/ios/"
+#define SERVER_URL @"http://birdwatching.davidahopp.com/"
 
 - (void)setRestString:(NSString *)restString
 {
@@ -94,11 +94,11 @@ static NSInteger connectionCount;
 {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.url];
     [request setHTTPMethod:method];
-    [request setHTTPShouldUsePipelining:YES];
     
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+
     if (data) {
-        //NSData *body = [NSJSONSerialization dataWithJSONObject:data options:0 error:nil];
-        NSData *body = [data dataUsingEncoding:NSUTF8StringEncoding];
+        NSData *body = [NSJSONSerialization dataWithJSONObject:data options:0 error:nil];
         [request setHTTPBody:body];
     }
 	

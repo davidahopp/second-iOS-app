@@ -97,10 +97,9 @@
 
 }
 - (IBAction)sendBirdSightingToServer:(id)sender {
-    Requester *requester = [[Requester alloc] initWithRestString:@"process_any.php" andDelegate:self andIdentifier:@"sendBirdSighting"];
+    Requester *requester = [[Requester alloc] initWithRestString:@"bird_sightings?format=json" andDelegate:self andIdentifier:@"sendBirdSighting"];
     
-    [requester performHTTPMethod:@"POST" withData:[self.sighting formatForWeb]];
-    
+    [requester performHTTPMethod:@"POST" withData:[self.sighting proxyForJson]];
 }
 
 - (void)identifierDidFinishDownloading:(NSString *)identifier withJSON:(NSDictionary *)json

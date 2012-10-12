@@ -17,5 +17,7 @@
 @property (nonatomic, strong) UIImage *image;
 -(id)initWithName:(NSString *)name location:(NSString *)location date:(NSDate *)date latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude image:(UIImage *)image;
 - (NSString *)formatForWeb;
+- (id)proxyForJson;
+
 
 @end

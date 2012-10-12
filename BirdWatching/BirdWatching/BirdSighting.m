@@ -55,5 +55,13 @@
             self.name, self.location, self.date, self.latitude, self.longitude];
 }
 
+- (id)proxyForJson
+{
+    NSDictionary *birdSightingDictionary = [NSDictionary dictionaryWithObjectsAndKeys:self.name, @"name", self.location, @"location", self.latitude, @"latitude", self.longitude, @"longitude", nil];
+    
+    return [NSDictionary dictionaryWithObject:birdSightingDictionary forKey:@"bird_sighting"];
+    
+}
+
 
 @end
