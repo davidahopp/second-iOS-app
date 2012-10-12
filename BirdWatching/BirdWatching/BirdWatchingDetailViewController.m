@@ -104,6 +104,10 @@
 
 - (void)identifierDidFinishDownloading:(NSString *)identifier withJSON:(NSDictionary *)json
 {
+    
+    BirdSighting *bs = [[BirdSighting alloc] initWithDictionary:json];
+    NSLog(@"%@", bs.latitude);
+    
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Posted!"
 														message:@"YAY!!"
 													   delegate:nil
