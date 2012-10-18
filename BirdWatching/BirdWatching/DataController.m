@@ -19,10 +19,11 @@
 @implementation DataController
 
 @synthesize masterBirdSightingList = _masterBirdSightingList;
+@synthesize delegate = _delegate;
 
 - (id)init {
     if (self = [super init]) {
-        [self initializeDataList];
+//        [self initializeDataList];
         return self;
     }
     return nil;
@@ -32,13 +33,19 @@
     //NSMutableArray *sightingList = [[NSMutableArray alloc] init];
     //self.masterBirdSightingList = sightingList;
 
-    NSData *myDecodedObject = [[NSUserDefaults standardUserDefaults] objectForKey: [NSString stringWithFormat:BIRD_ARRAY_TAG]];
-    NSArray *decodedArray = [NSKeyedUnarchiver unarchiveObjectWithData: myDecodedObject];
-    self.masterBirdSightingList = [decodedArray mutableCopy];
+//    NSData *myDecodedObject = [[NSUserDefaults standardUserDefaults] objectForKey: [NSString stringWithFormat:BIRD_ARRAY_TAG]];
+//    NSArray *decodedArray = [NSKeyedUnarchiver unarchiveObjectWithData: myDecodedObject];
+    
     if (self.masterBirdSightingList == nil)
     {
         self.masterBirdSightingList = [[NSMutableArray alloc] init];
     }
+    
+    Requester *requester = [[Requester alloc] initWithRestString:@"bird_sightings" andDelegate:self andIdentifier:@"birdSightingRetrieval"];
+    [requester performHTTPMethod:@"GET" withData:nil];
+    
+    //self.masterBirdSightingList = [decodedArray mutableCopy];
+    
     //[self addBirdSightingWithName:@"Pigeon" location:@"Everywhere" latitude:[NSNumber numberWithDouble:37.78] longitude:[NSNumber numberWithDouble:-122.40 image:nil]];
     //[self addBirdSightingWithName:@"Pigeon1" location:@"Everywhere" latitude:[NSNumber numberWithDouble:36.78] longitude:[NSNumber numberWithDouble:-122.40 image:nil]];
     //[self addBirdSightingWithName:@"Pigeon2" location:@"Everywhere" latitude:[NSNumber numberWithDouble:37.78] longitude:[NSNumber numberWithDouble:-120.40 image:nil]];
@@ -88,5 +95,19 @@ longitude:(NSNumber *)longitude image:(UIImage *) image{
     
     [defaults synchronize];
 }
+
+- (void)identifierDidFinishDownloading:(NSString *)identifier withArray:(NSArray *)array
+{
+    [self.masterBirdSightingList removeAllObjects];
+    
+    for (NSDictionary *dict in array)
+    {
+        BirdSighting *bs = [[BirdSighting alloc] initWithDictionary:dict];
+        [self.masterBirdSightingList addObject:bs];
+    }
+    
+    [self.delegate reloadData];
+}
+
 
 @end

@@ -2,7 +2,8 @@
 
 @protocol RequesterDelegate
 @optional
-- (void)identifierDidFinishDownloading:(NSString *)identifier withJSON:(NSDictionary *)json;
+- (void)identifierDidFinishDownloading:(NSString *)identifier withObject:(NSDictionary *)json;
+- (void)identifierDidFinishDownloading:(NSString *)identifier withArray:(NSArray *)array;
 @end
 
 @interface Requester : NSObject 

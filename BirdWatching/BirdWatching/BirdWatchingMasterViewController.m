@@ -19,7 +19,7 @@
 
 
 @interface BirdWatchingMasterViewController ()
-<AddSightingViewControllerDelegate, SightingMapViewControllerDelagate>
+<AddSightingViewControllerDelegate, SightingMapViewControllerDelagate, DataControllerDelegate>
 @end
 
 /*
@@ -49,6 +49,10 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     */
+    
+    self.dataController = [[DataController alloc] init];
+    self.dataController.delegate = self;
+    [self.dataController initializeDataList];
 }
 
 - (void)viewDidUnload
@@ -62,7 +66,7 @@
 }
 
 - (void)addSightingViewControllerDidFinish:(AddSightingViewControllerViewController *)controller name:(NSString *)name location:(NSString *)location latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude image:(UIImage *)image {
-
+    
     if ([name length] || [location length]) {
         [self.dataController addBirdSightingWithName:name location:location latitude:latitude longitude:longitude image:image];
         [[self tableView] reloadData];
@@ -137,6 +141,11 @@
 
 - (void)sightingMapViewDidCancel:(SightingMapViewController *)controller{
     [self dismissViewControllerAnimated:YES completion: NULL];
+}
+
+- (void)reloadData
+{
+    [self.tableView reloadData];
 }
 
 

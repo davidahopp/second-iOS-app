@@ -59,14 +59,18 @@ static NSInteger connectionCount;
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection;
 {
-	NSDictionary *json = [NSJSONSerialization JSONObjectWithData:(NSData *)self.responseData options:NSJSONReadingMutableContainers error:nil];
-	
     if (--connectionCount <= 0) {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     }
 	
-    if ([self.delegate respondsToSelector:@selector(identifierDidFinishDownloading:withJSON:)]) {
-        [self.delegate identifierDidFinishDownloading:self.identifier withJSON:json];
+    if ([self.delegate respondsToSelector:@selector(identifierDidFinishDownloading:withObject:)]) {
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:(NSData *)self.responseData options:NSJSONReadingMutableContainers error:nil];
+        [self.delegate identifierDidFinishDownloading:self.identifier withObject:json];
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(identifierDidFinishDownloading:withArray:)]) {
+        NSArray *array = [NSJSONSerialization JSONObjectWithData:(NSData *)self.responseData options:NSJSONReadingMutableContainers error:nil];
+        [self.delegate identifierDidFinishDownloading:self.identifier withArray:array];
     }
     
     self.delegate = nil;

@@ -17,11 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    BirdWatchingMasterViewController *firstViewController =
-    (BirdWatchingMasterViewController *)[[navigationController viewControllers] objectAtIndex:0];
-    BirdSightingDataController *aDataController = [[DataController alloc] init];
-    firstViewController.dataController = aDataController;
     return YES;
 }
 							

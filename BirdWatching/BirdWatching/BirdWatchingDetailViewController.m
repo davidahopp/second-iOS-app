@@ -102,7 +102,7 @@
     [requester performHTTPMethod:@"POST" withData:[self.sighting proxyForJson]];
 }
 
-- (void)identifierDidFinishDownloading:(NSString *)identifier withJSON:(NSDictionary *)json
+- (void)identifierDidFinishDownloading:(NSString *)identifier withObject:(NSDictionary *)json
 {
     
     BirdSighting *bs = [[BirdSighting alloc] initWithDictionary:json];
