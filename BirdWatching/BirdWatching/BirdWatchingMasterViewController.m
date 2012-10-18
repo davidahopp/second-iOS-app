@@ -111,6 +111,12 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         //delete local
         [self.dataController removeObjectAtIndex:indexPath.row];
+        
+        NSInteger sightingId = [[[self.dataController.masterBirdSightingList objectAtIndex:indexPath.row] birdSightingId] integerValue];
+        NSString *restString = [NSString stringWithFormat:@"bird_sightings/%d", sightingId];
+        Requester *req = [[Requester alloc] initWithRestString:restString andDelegate:nil andIdentifier:nil];
+        [req performHTTPMethod:@"DELETE" withData:nil];
+        
         //show delete local
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }

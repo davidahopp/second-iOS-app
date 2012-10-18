@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface BirdSighting : NSObject
+
+@property (nonatomic, strong) NSNumber *birdSightingId;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *location;
 @property (nonatomic, strong) NSDate *date;

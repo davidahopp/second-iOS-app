@@ -9,7 +9,7 @@
 #import "BirdSighting.h"
 
 @implementation BirdSighting
-@synthesize name = _name, location = _location, date = _date, latitude = _latitude, longitude = _longitude, image = _image;
+@synthesize name = _name, location = _location, date = _date, latitude = _latitude, longitude = _longitude, image = _image, birdSightingId = _birdSightingId;
 
 #define KEY_NAME @"name"
 #define KEY_LOCATION @"location"
@@ -17,11 +17,13 @@
 #define KEY_LONGITUDE @"longitude"
 #define KEY_DATE @"sightingDate"
 #define KEY_IMAGE @"image"
+#define KEY_ID @"id"
 
 - (id)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     
     if (self) {
+        _birdSightingId = [dictionary objectForKey:KEY_ID];
         _name = [dictionary objectForKey:KEY_NAME];
         _location = [dictionary objectForKey:KEY_LOCATION];
         _date = [dictionary objectForKey:KEY_DATE];
@@ -51,6 +53,7 @@
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
     //Encode properties, other class variables, etc
+    [encoder encodeObject:self.birdSightingId forKey:KEY_ID];
     [encoder encodeObject:self.name forKey:KEY_NAME];
     [encoder encodeObject:self.location forKey:KEY_LOCATION];
     [encoder encodeObject:self.date forKey:KEY_DATE];
@@ -62,6 +65,7 @@
 - (id)initWithCoder:(NSCoder *)decoder {
     if((self = [super init])) {
         //decode properties, other class vars
+        self.birdSightingId = [decoder decodeObjectForKey:KEY_ID];
         self.name = [decoder decodeObjectForKey:KEY_NAME];
         self.location = [decoder decodeObjectForKey:KEY_LOCATION];
         self.date = [decoder decodeObjectForKey:KEY_DATE];
